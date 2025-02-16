@@ -1,0 +1,16 @@
+.countdown {
+    @apply flex gap-4 mt-4;
+  
+    .box {
+      @apply flex flex-col text-grayish items-center bg-white p-3 rounded-lg shadow;
+  
+      h3 {
+        @apply text-xl font-digitalNumbers md:text-2xl font-bold;
+      }
+  
+      p {
+        @apply text-xs font-poppins md:text-sm text-gray-500;
+      }
+    }
+  }
+  

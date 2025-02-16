@@ -1,0 +1,106 @@
+.wrapper {
+  @apply flex flex-col items-center w-full py-10;
+
+  .main {
+    @apply flex items-start w-11/12 md:flex-row md:items-start md:w-11/12 md:gap-8 flex-col gap-3 ;
+
+    .left {
+      @apply flex flex-col gap-4 w-full md:w-[40%] justify-center items-center md:justify-start md:items-start p-2;
+
+      .leftContent {
+        @apply flex flex-col gap-8 items-center md:items-start w-full;
+
+        .deals {
+          @apply flex flex-col gap-4 items-center md:items-start w-full;
+
+          .title {
+            @apply text-2xl text-grayish tracking-wide font-semibold w-full font-volk text-center md:text-left md:text-3xl;
+          }
+
+          .description {
+            @apply text-sm font-poppins text-customGray w-full leading-relaxed text-center md:text-left md:text-base;
+          }
+        }
+
+        .button {
+          @apply bg-black w-9/12 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-all md:w-1/2;
+        }
+      }
+
+      .hurry {
+        @apply text-lg text-grayish font-poppins font-semibold mt-4 md:mt-6;
+      }
+
+      .countdown {
+        @apply flex gap-4 mt-4 justify-center md:justify-start;
+
+        .box {
+          @apply flex flex-col text-grayish items-center bg-white p-3 rounded-lg shadow;
+
+          h3 {
+            @apply text-xl font-digitalNumbers font-bold md:text-2xl;
+          }
+
+          p {
+            @apply text-xs font-poppins text-gray-500 md:text-sm;
+          }
+        }
+      }
+    }
+
+    .right {
+      @apply flex justify-center w-full h-300 md:w-[60%] md:justify-end md:h-550 mt-6 md:mt-0;
+
+      .swiper {
+        @apply flex justify-center md:justify-end w-[95%] relative;
+
+        .swiperSlide {
+          @apply flex;
+
+          .dealCard {
+            @apply flex flex-col items-center relative;
+
+            .image {
+              @apply rounded-lg object-cover h-270 md:h-480;
+            }
+
+            .dealDetails {
+              @apply text-center mt-2 absolute bg-white p-2 rounded-lg shadow-lg bottom-16 left-2 opacity-80 md:bottom-20 md:left-5;
+
+              p {
+                @apply text-sm text-gray-600;
+              }
+
+              h4 {
+                @apply text-lg font-semibold md:text-lg;
+              }
+            }
+          }
+        }
+      }
+
+      :global(.swiper-pagination-bullet) {
+        @apply bg-gray-400 hover:bg-black;
+      }
+      
+      :global(.swiper-button-next),
+      :global(.swiper-button-prev) {
+        @apply absolute bottom-1 z-20  top-auto text-gray-500 hover:text-gray-800 transition-colors duration-300 max-md:hidden;
+      }
+      :global(.swiper-button-next::after),
+      :global(.swiper-button-prev::after) {
+        font-size: 1.1rem;
+      }
+      
+      :global(.swiper-button-next) {
+        @apply md:right-[86%] lg:right-[89%] bg-gray-200  w-8 h-8 rounded-full shadow-md;
+      }
+      
+      :global(.swiper-button-prev) {
+        @apply left-0  bg-gray-200  w-8 h-8 rounded-full shadow-md;
+      }
+    }
+  }
+}
+
+

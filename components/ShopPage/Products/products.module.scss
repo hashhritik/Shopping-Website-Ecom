@@ -1,0 +1,7 @@
+.mainDiv {
+  @apply flex w-11/12 gap-4 items-start justify-between mx-auto relative;
+
+  .closeIcon {
+    @apply w-6 h-6 cursor-pointer absolute top-14 right-8;
+  }
+}

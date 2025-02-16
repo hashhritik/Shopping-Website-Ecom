@@ -1,0 +1,227 @@
+.mainDiv {
+  @apply w-11/12  flex flex-col md:flex-row items-start justify-between gap-4 lg:gap-10 mt-8;
+
+  .overlay {
+    @apply fixed inset-0 w-screen h-screen bg-black/50 z-50;
+  }
+
+  .imagesContainer {
+    @apply w-full md:w-[48%] lg:w-[45%] flex items-center md:items-center gap-4 md:gap-8;
+
+    .allImages {
+      @apply w-[15%] hidden lg:flex flex-col gap-2 mt-3 lg:-mt-2 justify-start items-start lg:max-h-85 overflow-y-scroll hide-scrollbar;
+
+      .image {
+        @apply cursor-pointer;
+      }
+
+      .imageActive {
+        @apply border-2 border-black;
+      }
+    }
+
+    .activeImage {
+      @apply w-full lg:w-[80%] h-full flex items-center justify-center mb-4 rounded-lg;
+    }
+
+    .activeImg {
+      @apply w-full md:w-full h-auto object-fill rounded-md;
+    }
+  }
+
+  .textContainer {
+    @apply w-full md:w-[48%] flex flex-col items-end gap-5;
+
+    .logo {
+      @apply font-volk text-lg text-customGray w-full text-left;
+    }
+
+    .productDetails {
+      @apply w-full;
+
+      .descriptionDiv {
+        @apply flex items-center justify-between;
+
+        .productName {
+          @apply text-3xl font-volk;
+        }
+
+        .starImg {
+          @apply cursor-pointer mr-2;
+        }
+      }
+
+      .rating {
+        @apply text-black;
+      }
+
+      .priceDiv {
+        @apply flex items-center w-full gap-4 mt-4;
+
+        .price {
+          @apply font-poppins text-xl font-medium;
+
+          .maxPrice {
+            @apply text-sm text-customGray font-medium line-through;
+          }
+        }
+
+        .discount {
+          @apply bg-red-600 text-white rounded-full py-1 px-4;
+        }
+      }
+
+      .viewers {
+        @apply text-sm text-customGray font-poppins mt-4;
+      }
+
+      .countdown {
+        @apply flex items-center justify-between w-full mt-4 bg-red-50 px-2 py-3 lg:px-5 rounded-md border-2 border-red-400;
+
+        .paragraph {
+          @apply text-red-500 tracking-tighter text-md md:text-sm lg:text-lg font-jost;
+        }
+      }
+
+      .itemsLeft {
+        @apply w-full mt-6;
+
+        .alert {
+          @apply font-poppins text-sm text-customGray font-semibold;
+
+          .stockLeft {
+            @apply text-gray-600 font-bold;
+          }
+        }
+
+        .totalStock {
+          @apply w-full h-1 bg-gray-200 mt-2;
+
+          .stockCountBar {
+            @apply h-1;
+          }
+        }
+      }
+
+      .sizeContainer {
+        @apply flex flex-col mt-6;
+
+        .size {
+          @apply font-volk text-lg font-medium;
+        }
+
+        .buttonContainer {
+          @apply flex flex-row items-center justify-start gap-3 mt-2;
+
+          .button {
+            @apply px-4 py-2 border-1 border-black rounded-md;
+          }
+
+          .buttonActive {
+            @apply bg-black text-white;
+          }
+        }
+      }
+
+      .colContainer {
+        @apply flex flex-col mt-6;
+
+        .colName {
+          @apply font-volk text-lg font-medium;
+        }
+
+        .buttonContainer {
+          @apply flex flex-row items-center justify-start gap-3 mt-2;
+
+          .button {
+            @apply p-4 border-1 border-black rounded-full;
+          }
+
+          .buttonActive {
+            @apply border-2 border-solid border-gray-950 p-4 shadow-inner-custom;
+          }
+        }
+      }
+    }
+
+    .quantityDiv {
+      @apply w-full flex flex-col;
+
+      .quantity {
+        @apply font-volk text-lg font-medium;
+      }
+
+      .buttonContainer {
+        @apply flex items-center justify-between mt-2;
+
+        .quantityButtonContainer {
+          @apply flex items-center justify-between gap-2 px-1 py-2 border-1 border-gray-300 rounded-md w-[30%] lg:w-[25%];
+
+          .button {
+            @apply px-2 text-2xl hover:bg-gray-200 rounded-md;
+          }
+        }
+
+        .addCart {
+          @apply w-[65%];
+
+          .addButton {
+            @apply w-full px-5 py-3 border-1 border-gray-500 rounded-md font-volk font-medium;
+          }
+        }
+
+        .menuOpen {
+          @apply fixed flex-auto w-full lg:w-[40%] min-h-screen bg-gray-50 top-0 right-0 z-50 transition-transform duration-300;
+
+          .closeIcon {
+            @apply w-6 h-6 cursor-pointer bg-inherit absolute top-6 right-8;
+          }
+        }
+      }
+    }
+
+    .toolsDiv {
+      @apply flex flex-col lg:flex-row items-start lg:items-center justify-start gap-3 sm:gap-6 lg:gap-12 w-full mt-3 sm:mt-6;
+
+      .commonDiv {
+        @apply flex items-center gap-3;
+
+        .image {
+          @apply cursor-pointer;
+        }
+
+        .text {
+          @apply text-lg font-jost;
+        }
+      }
+    }
+
+    .divider {
+      @apply border-b border-gray-200 w-full;
+    }
+
+    .delAndShipDiv {
+      @apply flex flex-col gap-2 mt-4 items-start w-full;
+
+      .deliveryDiv {
+        @apply flex items-center justify-start gap-2 md:pl-2;
+
+        .text {
+          @apply text-sm lg:text-lg font-jost;
+
+          .boldText {
+            @apply font-volk font-semibold;
+          }
+        }
+      }
+    }
+
+    .paymentDiv {
+      @apply flex flex-col items-center justify-center w-full gap-1 mt-4 py-6 bg-gray-100 mb-5;
+
+      .paymentsText {
+        @apply text-lg font-volk mt-3;
+      }
+    }
+  }
+}

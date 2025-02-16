@@ -1,0 +1,81 @@
+
+  .miniCartDiv {
+    @apply w-[92%] flex flex-col justify-between justify-self-center h-screen z-20;
+    .topItems {
+      @apply w-full flex flex-col mt-10;
+      .shoppingCartText {
+        @apply text-4xl font-volk font-medium;
+      }
+      .buyText {
+        @apply text-md font-poppins text-gray-500 mt-5;
+        .highLight {
+          @apply font-medium text-black;
+        }
+      }
+      .productDiv {
+        @apply w-full  flex items-start gap-5 justify-between mt-10;
+        .activeImage {
+          @apply w-[50%] h-full;
+        }
+        .activeProductDetails {
+          @apply w-full h-full;
+          .activeName {
+            @apply font-volk font-medium text-md;
+          }
+          .activeColor {
+            @apply font-poppins text-gray-500;
+          }
+          .activePrice {
+            @apply font-poppins font-medium;
+          }
+        }
+        .quantityButtonContainer {
+          @apply flex items-center justify-between gap-2 px-2 py-1 border-1 border-gray-300 rounded-md w-[40%]  mb-10 mt-2  max-ss:gap-2 max-ss:px-2 max-ss:py-1 max-ss:border-1 max-ss:rounded-md max-ss:w-[50%] max-ss:mb-10 max-ss:mt-2;
+         
+          .button {
+            @apply  text-2xl hover:bg-gray-200 rounded-md;
+          }
+        }
+      }
+      .divider {
+        @apply border-b border-gray-300 w-full mt-4;
+      }
+    }
+
+    .bottomItems {
+      @apply w-full flex flex-col items-start;
+      .checkboxDiv {
+        @apply flex items-center justify-start gap-3;
+        .checkbox {
+          @apply w-5 h-5 rounded-md;
+        }
+        .suggestionText {
+          @apply text-gray-400 text-md;
+          .boldText {
+            @apply text-black font-medium;
+          }
+        }
+      }
+      .divider {
+        @apply border-b border-gray-300 w-full mt-2;
+      }
+      .total {
+        @apply w-full flex justify-between items-center mt-6;
+        .subtotal {
+          @apply font-volk text-md font-medium;
+        }
+        .value {
+          @apply font-volk text-md font-medium;
+        }
+      }
+      .checkout {
+        @apply w-[80%] bg-black text-white text-sm rounded-md py-2 border-1 self-center mt-6;
+      }
+      .viewCartDiv {
+        @apply w-full mt-2 mb-6;
+        .viewCart {
+          @apply text-md hover:underline font-volk inline-block self-center text-center w-full;
+        }
+      }
+    }
+  }

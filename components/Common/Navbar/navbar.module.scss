@@ -1,0 +1,47 @@
+.container {
+  @apply flex justify-center w-full sticky top-0 z-20 bg-white;
+
+  .subContainer {
+    @apply flex flex-col items-center w-11/12 relative;
+
+    .wrapper {
+      @apply w-full h-20;
+
+      .navbar {
+        @apply flex items-center justify-between gap-8 w-full h-full mx-auto;
+
+        .logo {
+          @apply text-grayish text-4xl font-bold font-volk;
+        }
+        .hamburger {
+          @apply block bg-transparent border-none md:hidden;
+
+          img {
+            @apply w-8 h-8;
+          }
+        }
+        .authBtn {
+          @apply max-md:hidden flex justify-between  gap-8 items-center;
+          .link {
+            @apply text-grayish text-lg font-poppins;
+          }
+          .btn {
+            @apply bg-black text-white py-2 px-6 rounded-lg;
+          }
+        }
+      }
+
+      .userIcon {
+        @apply flex justify-end gap-5 ;
+
+        .hamburger {
+          @apply bg-transparent border-none;
+          @apply md1:hidden;
+          img {
+            @apply w-9 h-9;
+          }
+        }
+      }
+    }
+  }
+}

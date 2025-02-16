@@ -1,0 +1,46 @@
+.headerLinks {
+  @apply flex items-center text-grayish text-lg font-poppins flex-grow;
+    
+  @apply max-md:flex max-md:flex-col max-md:absolute max-md:top-[100%] max-md:right-0 max-md:bg-white max-md:shadow-md max-md:rounded-lg max-md:p-4 max-md:w-36 max-md:gap-4 max-md:transition-transform max-md:transform max-md:scale-0 max-md:origin-top-right;
+
+  .shopnavlist {
+    @apply flex items-center justify-center gap-8 list-none w-[95%];
+    @apply max-md:flex max-md:flex-col max-md:gap-4;
+  }
+
+  .homenavlist {
+    @apply ml-auto flex items-center gap-8 list-none;
+    @apply max-md:flex max-md:flex-col max-md:gap-4 max-md:ml-0;
+  }
+
+  .navLinks {
+    @apply ml-auto flex items-center gap-5;
+    @apply max-md:flex max-md:flex-col max-md:items-center max-md:w-full;
+
+    .navImgLink {
+      @apply cursor-pointer relative flex items-center gap-2 justify-center w-5 h-5;
+
+      .name {
+        @apply md:hidden;
+      }
+
+      img {
+        @apply w-5 h-5;
+      }
+
+      .badge {
+        @apply absolute bg-red-500 text-white text-xs font-bold flex items-center justify-center rounded-full -top-1 -right-1 w-4 h-4 leading-4;
+        @apply max-md:right-5;
+      }
+    }
+  }
+
+  .authBtn {
+    @apply md:hidden;
+    @apply max-md:flex max-md:flex-col max-md:items-center max-md:gap-4;
+  }
+}
+
+.show {
+  @apply max-md:scale-100;
+}

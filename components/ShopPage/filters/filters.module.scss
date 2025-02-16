@@ -1,0 +1,134 @@
+.mainDiv {
+  @apply hidden md:flex flex-col w-full md:max-w-[20%] md:pt-12 p-4 rounded-lg mt-8;
+
+  &.filtersOpen {
+    @apply flex flex-col justify-start bg-gray-50 w-full p-4 rounded-lg shadow-lg md:hidden overflow-y-scroll max-h-96;
+  }
+
+  .heading {
+    @apply font-volk text-4xl md:text-3xl mb-4;
+  }
+
+  .headingSmallScreen {
+    @apply absolute top-8 md:top-4 pt-4 w-[80%]  bg-inherit;
+  }
+
+  .sizeButtons {
+    @apply flex flex-col mt-16 md:mt-0 mb-6 w-[40%] md:w-[80%] lg:w-[65%];
+
+    .size {
+      @apply font-volk lg:text-lg mb-4 lg:mb-2;
+    }
+
+    .buttons {
+      @apply flex md:grid md:grid-cols-2 lg:flex flex-wrap gap-2;
+
+      .button {
+        @apply border border-gray-400 px-4 py-2.5 lg:px-4 lg:py-2.5 rounded-md;
+      }
+    }
+  }
+
+  .colorContainer {
+    @apply w-[50%] md:w-full;
+    .colorText {
+      @apply font-volk lg:text-lg mb-3;
+    }
+
+    .colorButtons {
+      @apply grid grid-cols-7 md:grid-cols-6 lg:flex flex-wrap gap-1;
+
+      .buttonOne {
+        @apply rounded-full w-7 h-7 md:w-4 md:h-4 lg:w-7 lg:h-7;
+      }
+    }
+  }
+
+  .prices {
+    @apply mt-5;
+    .priceText {
+      @apply font-volk lg:text-lg;
+    }
+
+    .ulList {
+      @apply mt-3;
+      .liItem {
+        @apply flex items-center font-poppins text-customGray mb-3 md:mb-2;
+        .priceRange {
+          @apply ml-1 py-1 md:p-0 rounded-md;
+        }
+      }
+    }
+  }
+
+  .brandsContainer {
+    @apply mt-5 w-[50%] md:w-full;
+
+    .textContainer {
+      @apply flex justify-between items-center;
+      .brandText {
+        @apply font-volk lg:text-lg;
+      }
+      .image {
+        @apply h-2;
+      }
+    }
+
+    .brands {
+      @apply flex flex-wrap gap-4 mt-3;
+      .brand {
+        @apply font-poppins text-customGray flex gap-2 items-center cursor-pointer;
+        .brandName {
+          @apply py-1 md:p-0 rounded-md;
+        }
+      }
+      .activeBrand {
+        @apply bg-gray-200 px-1 py-1 rounded-lg;
+      }
+    }
+  }
+
+  .categories {
+    @apply mt-5;
+
+    .catTextContainer {
+      @apply flex items-center justify-between w-[30%] md:w-full;
+      .categoriesText {
+        @apply font-volk lg:text-lg;
+      }
+      .img {
+        @apply h-2;
+      }
+    }
+
+    .categoriesUl {
+      @apply mt-3;
+      .categoriesItem {
+        @apply font-poppins text-customGray mb-3 md:mb-2 flex gap-1 items-center;
+        .category {
+          @apply py-1 rounded-md cursor-pointer;
+        }
+      }
+    }
+  }
+
+  .tagsContainer {
+    @apply mt-5 w-[70%] md:w-full;
+    .tagText {
+      @apply font-volk lg:text-lg;
+    }
+
+    .tags {
+      @apply flex flex-wrap gap-2 mt-3;
+      .tagItem {
+        @apply text-customGray font-poppins mb-1 md:mb-0 flex items-center gap-1 cursor-pointer;
+        .tag {
+          @apply py-1 rounded-md;
+        }
+      }
+      .activeTag {
+        @apply bg-gray-200 px-1 py-1 rounded-lg;
+      }
+    }
+  }
+}

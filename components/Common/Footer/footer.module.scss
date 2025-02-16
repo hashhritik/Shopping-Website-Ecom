@@ -1,0 +1,38 @@
+.container {
+  @apply w-full bg-white shadow-sm;
+
+  .wrapper {
+    @apply w-11/12 mx-auto h-auto rounded-lg;
+
+    .divider {
+      @apply border-t border-gray-300 my-5;
+    }
+
+    .footerItems {
+      @apply flex flex-col items-center text-center p-5 gap-4 
+             md:flex-row md:justify-between md:text-left md:items-center 
+             max-xml:gap-5;
+    }
+
+    .logo {
+      @apply font-volk text-grayish text-5xl font-bold mb-4 
+             md:text-4xl md:mb-0 
+             max-xml:text-4xl max-xml:m-0;
+    }
+
+    .footerLinksList {
+      @apply flex flex-col gap-2 text-lg text-grayish font-poppins 
+             md:flex-row md:flex-wrap md:gap-4 
+             max-xml:gap-2 max-xml:text-sm;
+    }
+
+    .footerLinksList li {
+      @apply hover:text-gray-900 transition duration-300;
+    }
+
+    .copyRights {
+      @apply flex justify-center pt-5 text-xs text-gray-600 text-center 
+             max-xml:text-xs;
+    }
+  }
+}

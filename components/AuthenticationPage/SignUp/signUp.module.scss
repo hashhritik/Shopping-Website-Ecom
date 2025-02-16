@@ -1,0 +1,83 @@
+.container {
+  @apply flex justify-center items-center my-auto h-screen w-full;
+
+  .card {
+    @apply flex flex-col md:flex-row items-center gap-5 w-[90%] h-auto border-1 rounded-lg shadow-lg;
+
+    .imageContainer {
+      @apply hidden md:block md:w-[45%];
+    }
+
+    .content {
+      @apply w-full md:w-[60%] flex flex-col gap-5 justify-center items-center max-md:p-4;
+
+      h1 {
+        @apply font-semibold text-3xl md:text-5xl font-volk text-gray-600 w-[80%] md:w-[70%];
+      }
+
+      .header {
+        @apply text-left w-[80%] md:w-[70%] flex flex-col;
+
+        h2 {
+          @apply font-medium text-md md:text-lg -mb-4 md:-mb-6 font-volk;
+        }
+      }
+
+      .socialButtons {
+        @apply flex flex-col md:flex-row tracking-tighter justify-between w-[80%] md:w-[70%] h-auto gap-4 md:gap-0;
+
+        .googleButton {
+          @apply flex justify-center whitespace-normal gap-1 border-red-600 rounded-lg  items-center w-full md:w-[45%] border-2 p-2;
+        }
+
+        .facebookButton {
+          @apply flex justify-center whitespace-normal gap-1 border-blue-600 rounded-lg items-center w-full md:w-[45%] border-2   p-2;
+        }
+      }
+
+      .divider {
+        @apply text-gray-400 font-semibold text-lg md:text-2xl;
+      }
+
+      .form {
+        @apply flex flex-col gap-5 w-[80%] md:w-[70%] justify-center items-center;
+
+        .grid {
+          @apply md:grid-cols-2 gap-4 w-full;
+
+          input {
+            @apply w-full h-8 border-b-2 focus:outline-none pl-2;
+
+            &.halfWidth {
+              @apply w-[90%];
+            }
+          }
+        }
+
+        .submitButton {
+          @apply w-full md:w-[70%] bg-black text-white rounded-lg shadow-md p-2;
+        }
+
+        .errorMessage {
+          @apply text-red-500;
+        }
+
+        .successMessage {
+          @apply text-green-500;
+        }
+
+        .loginLink {
+          @apply text-blue-600;
+        }
+      }
+
+      .termWrapper {
+        @apply w-full md:w-[90%];
+
+        .terms {
+          @apply float-end text-gray-600;
+        }
+      }
+    }
+  }
+}

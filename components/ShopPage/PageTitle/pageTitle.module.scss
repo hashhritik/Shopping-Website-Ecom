@@ -1,0 +1,19 @@
+.mainDiv {
+  @apply flex items-center justify-center mt-10;
+
+  .secondDiv {
+    @apply flex flex-col items-center gap-2 w-162;
+
+    .mainText {
+      @apply text-4xl scale-x-[1.1] font-volk;
+    }
+
+    .innerDiv {
+      @apply flex items-center gap-2;
+
+      .imageContainer {
+        @apply h-10;
+      }
+    }
+  }
+}

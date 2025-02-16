@@ -1,0 +1,148 @@
+.container {
+  @apply flex flex-col gap-10 w-full bg-gray-200 relative;
+
+  .profileContainer {
+    @apply flex min-h-max w-full mt-10;
+
+    .content {
+      @apply flex flex-col gap-5 w-full;
+
+      .profileHeader {
+        @apply w-full flex justify-center;
+
+        h2 {
+          @apply font-poppins font-semibold text-4xl w-[90%];
+        }
+      }
+
+      .profileCard {
+        @apply flex justify-center;
+
+        .card {
+          @apply flex flex-col gap-5 bg-white rounded-lg shadow-md w-11/12 p-5;
+
+          .editButton {
+            @apply flex justify-between items-center text-white w-full max-ss:w-full;
+
+            button {
+              @apply flex justify-center items-center bg-black rounded-lg gap-1 text-lg px-3 py-2 hover:bg-gray-700;
+            }
+
+            p {
+              @apply font-semibold text-lg text-gray-600;
+            }
+          }
+
+          .profileInfo {
+            @apply flex items-center gap-3 h-auto border rounded-lg shadow-md p-3 max-ss:flex-col;
+
+            .imageContainer {
+              @apply flex flex-col h-28 w-28 items-center rounded-full relative;
+
+              .image {
+                @apply h-28 w-28 relative;
+
+                .img {
+                  @apply rounded-full h-full w-full;
+                }
+              }
+
+              input {
+                @apply hidden;
+              }
+
+              button {
+                @apply absolute bg-gray-500 rounded-full p-1 bottom-4 right-4 translate-x-1/2 translate-y-1/2 hover:opacity-90;
+              }
+            }
+
+            .nameSection {
+              @apply flex justify-start items-center w-4/6 max-ss:w-full max-ss:flex max-ss:justify-center;
+
+              label {
+                @apply flex font-medium;
+
+                input {
+                  @apply border rounded px-2 py-1 focus:outline-none focus:ring focus:border-blue-500;
+                }
+              }
+
+              span {
+                @apply text-gray-600;
+              }
+            }
+          }
+
+          .personalInfo {
+            @apply flex flex-col gap-5 border shadow-md rounded-lg p-3 w-full;
+
+            .header {
+              @apply flex items-center;
+
+              .info {
+                @apply w-[90%] font-medium;
+              }
+
+              .button {
+                @apply flex justify-center items-center w-[15%];
+
+                button {
+                  @apply bg-black text-white px-4 py-2 rounded hover:bg-gray-800;
+                }
+              }
+            }
+
+            .details {
+              @apply grid lg:grid-cols-2 sm:grid-cols-1 gap-10 p-3 text-gray-600;
+
+              label {
+                @apply font-medium w-full;
+
+                input {
+                  @apply border rounded px-2 py-1 focus:outline-none;
+                }
+
+                select {
+                  @apply border rounded px-2 py-1 focus:outline-none;
+                }
+              }
+
+              span {
+                @apply text-gray-600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    @apply fixed inset-0 flex items-center justify-center bg-gray-200 bg-opacity-75 rounded-xl;
+
+    .modalContent {
+      @apply rounded-lg shadow-lg p-5 w-80 flex flex-col gap-3 relative bg-white;
+
+      .modalHeader {
+        @apply flex justify-between items-center w-full;
+
+        h2 {
+          @apply text-smd font-semibold text-gray-800;
+        }
+        .cancelButton {
+          @apply bg-gray-500 hover:bg-gray-600 text-white p-1 rounded-full absolute top-2 right-2 cursor-pointer;
+        }
+      }
+      .actionButton {
+        @apply flex justify-center items-center gap-2 ;
+        .updateButton {
+          @apply bg-black rounded-xl w-2/5 p-2 text-sm text-white hover:bg-gray-700;
+        }
+
+        .removeButton {
+          @apply bg-red-700 text-white w-2/5 p-2 text-sm rounded-xl hover:bg-red-800;
+        }
+      }
+    }
+  }
+}
